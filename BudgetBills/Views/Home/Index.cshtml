@@ -1,0 +1,127 @@
+﻿@using BudgetBills.Models;
+@model BillsViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    #bill_table {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Bills</h1>
+
+    <!-- Button trigger modal -->
+    <div class="d-flex align-items-end justify-content-end w-75 m-auto">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBillModal">
+            New Bill
+        </button>
+    </div>
+    <div class="row">
+        <!--filter-->
+        <div class="col-1">
+            <p class="lead text-center">Filter</p>
+            <hr />
+            <form asp-action="FilterBills" method="post">
+                <div class="form-group">
+                    <label>Necessity Level</label>
+                    <select name="filterArray" class="form-control">
+                        <option value="0" class="text-secondary" selected>All</option>
+                        <option value="1">Needs</option>
+                        <option value="2">Wants</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select name="filterArray"
+                        asp-items="@(new SelectList(Model.Categories, "CategoryId", "Description1"))" class="form-control">
+                        <option value="0" class="text-secondary" selected>All</option>
+                    </select>
+                </div>
+
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-secondary">Refresh</button>
+                </div>
+            </form>
+        </div>
+
+        <!--table-->
+        <div class="col-11" id="bill_table">
+            <!--bills table-->
+            <table class="table table-hover table-dark mt-4 w-75 m-auto">
+                <thead>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Bill bill in Model.Bills)
+                    {
+                        <tr>
+                            <td>@bill.Description</td>
+                            <td>@bill.AmountFormatted</td>
+                            <td>@bill.DateFormatted</td>
+                            <td>@bill.Category.Description1</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Bill Modal -->
+    <div class="modal fade" id="addBillModal" tabindex="-1" aria-labelledby="addBillModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBillModalLabel">New Bill</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--input form-->
+                    <div class="row m-auto">
+                        <div class="text-start">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <form asp-action="Index" method="post">
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.Description">Description:</label>
+                                    <input asp-for="@Model.Bill.Description" type="text" class="form-control" placeholder="Enter description">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.Amount">Amount:</label>
+                                    <input asp-for="@Model.Bill.Amount" type="number" class="form-control" placeholder="Enter amount">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.DueDate">Due Date:</label>
+                                    <input asp-for="@Model.Bill.DueDate" type="date" class="form-control" value="@(DateTime.Now.ToString("yyyy-MM-dd"))">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@Model.Bill.CategoryId">Category</label>
+                                    <select asp-for="@Model.Bill.CategoryId"
+                                            asp-items="@(new SelectList(Model.Categories, "CategoryId", "Description1"))"
+                                            class="form-control">
+                                    </select>
+                                </div>
+
+                                <input asp-for="@Model.Bill.BillId" type="hidden" />
+                                <!--buttons-->
+                                <button type="submit" class="btn btn-secondary mt-2">Submit</button>
+                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
