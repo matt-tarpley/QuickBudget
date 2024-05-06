@@ -14,7 +14,8 @@ namespace BudgetBills.Controllers
         private BudgetBillsContext db;
         public HomeController(BudgetBillsContext context) => db = context;
 
-        [HttpGet]
+
+        [HttpGet] //initial entry and filter
         public ViewResult Index(int[] filterArray)
         {
             IQueryable<Bill> query = db.Bills //creating a query that we can build on
@@ -26,7 +27,7 @@ namespace BudgetBills.Controllers
 
                 if (billFilter.HasNecessityLevel)
                 {
-                    string necessitylevel = billFilter.NecessityLevelId == 1 ? "Needs" : "Wants";
+                    string necessitylevel = billFilter.NecessityLevelId == 1 ? "Needs" : "Wants"; //map numerical value to string value 
 
                     query = query.Where(b => b.Category.Description2 == necessitylevel);
                 }
@@ -37,6 +38,7 @@ namespace BudgetBills.Controllers
             }
             
 
+            //create new viewmodel
             BillsViewModel viewModel = new BillsViewModel
             {
                 Bills = query
@@ -50,8 +52,7 @@ namespace BudgetBills.Controllers
 
         }
 
-        //new bill
-        [HttpPost]
+        [HttpPost] //add bill
         public RedirectToActionResult Index(BillsViewModel viewModel)
         {
             //gather new viewmodel data
@@ -79,7 +80,58 @@ namespace BudgetBills.Controllers
             return RedirectToAction("Index", updatedVM);
         }
 
-        [HttpPost]
+        [HttpPost] //PRG pattern for filter
         public RedirectToActionResult FilterBills(int[] FilterArray) { return RedirectToAction("Index", new { filterArray = FilterArray }); }
+
+        [HttpGet] //edit and delete
+        public IActionResult Edit(int id) {
+
+            if(id != 0) //if id is passed in
+            {
+                BillsViewModel viewModel = new BillsViewModel
+                {
+                    Bill = db.Bills.Find(id),
+                    Categories = db.Categories.ToList()
+                };
+
+                return View(viewModel);
+
+            }
+            else //if attempting to access through url **sort of uneccesary but just incase**
+            {
+                return RedirectToAction("Index");
+            }
+        
+        }
+
+        [HttpPost] //finalize edit
+        public IActionResult Edit(string btnType, BillsViewModel viewModel) 
+        {
+            if (btnType != null)
+                RedirectToAction("Index"); //relocate to index if no btnType passed in
+
+            if(ModelState.IsValid)
+            {
+                switch (btnType)
+                {
+                    case "delete":
+                        Bill bill = db.Bills.Find(viewModel.Bill.BillId);
+                        db.Bills.Remove(bill);
+                        break;
+
+                    case "update":
+                        db.Update(viewModel.Bill);
+                        break;
+                }
+
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            } 
+            else
+            {
+                ModelState.AddModelError("", "All fields required.");
+                return View("Edit");
+            }
+        }
     }
 }

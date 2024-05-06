@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\tarpl\OneDrive\Documents\Projects_2\BudgetBills\BudgetBills\BudgetBills
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/tarpl/OneDrive/Documents/Projects_2/BudgetBills/BudgetBills/BudgetBills/Views/Home/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tarpl/OneDrive/Documents/Projects_2/BudgetBills/BudgetBills/BudgetBills/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

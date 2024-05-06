@@ -9,6 +9,10 @@
         max-height: 500px;
         overflow-y: auto;
     }
+
+    .bill_row:hover {
+        cursor:pointer;
+    }
 </style>
 
 <div class="text-center">
@@ -16,8 +20,11 @@
 
     <!-- Button trigger modal -->
     <div class="d-flex align-items-end justify-content-end w-75 m-auto">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBillModal">
-            New Bill
+        <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#addCatModal">
+            Add Category
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addBillModal">
+            Add Bill
         </button>
     </div>
     <div class="row">
@@ -64,12 +71,13 @@
                 <tbody>
                     @foreach (Bill bill in Model.Bills)
                     {
-                        <tr>
+                        <tr class="bill_row" data-billid="@bill.BillId"> 
                             <td>@bill.Description</td>
                             <td>@bill.AmountFormatted</td>
                             <td>@bill.DateFormatted</td>
                             <td>@bill.Category.Description1</td>
                         </tr>
+
                     }
                 </tbody>
             </table>
@@ -124,4 +132,55 @@
             </div>
         </div>
     </div>
+
+
+    <!--category modal-->
+    <div class="modal fade" id="addCatModal" tabindex="-1" aria-labelledby="addCatModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCatModalLabel">New Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--input form-->
+                    <div class="row m-auto">
+                        <div class="text-start">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <form asp-action="Index" method="post">
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.Description">Description:</label>
+                                    <input asp-for="@Model.Bill.Description" type="text" class="form-control" placeholder="Enter description">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.Amount">Amount:</label>
+                                    <input asp-for="@Model.Bill.Amount" type="number" class="form-control" placeholder="Enter amount">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label asp-for="@Model.Bill.DueDate">Due Date:</label>
+                                    <input asp-for="@Model.Bill.DueDate" type="date" class="form-control" value="@(DateTime.Now.ToString("yyyy-MM-dd"))">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="@Model.Bill.CategoryId">Category</label>
+                                    <select asp-for="@Model.Bill.CategoryId"
+                                            asp-items="@(new SelectList(Model.Categories, "CategoryId", "Description1"))"
+                                            class="form-control">
+                                    </select>
+                                </div>
+
+                                <input asp-for="@Model.Bill.BillId" type="hidden" />
+                                <!--buttons-->
+                                <button type="submit" class="btn btn-secondary mt-2">Submit</button>
+                                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="~/js/BillViewScript.js"></script>

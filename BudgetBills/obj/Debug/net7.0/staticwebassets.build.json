@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CxivxQnotfZ/zRpfd6WAFCx8RN6F0FTwVNlmXA6C4ww=",
+  "Hash": "1CZD4mwaOJAcGO2QcV5egMxAUBxtl/Xj7d1e0n+kgYU=",
   "Source": "BudgetBills",
   "BasePath": "_content/BudgetBills",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\wwwroot\\js\\BillViewScript.js",
+      "SourceId": "BudgetBills",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\wwwroot\\",
+      "BasePath": "_content/BudgetBills",
+      "RelativePath": "js/BillViewScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\BillViewScript.js"
     },
     {
       "Identity": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\wwwroot\\js\\site.js",
