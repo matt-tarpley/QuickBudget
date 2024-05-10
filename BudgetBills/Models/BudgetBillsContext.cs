@@ -9,6 +9,7 @@ namespace BudgetBills.Models
 
         public DbSet<Bill> Bills { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<IncomeSource> IncomeSources { get; set; }
 
         //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)

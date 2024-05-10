@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\views\\incomesources\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\views\\incomesources\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\controllers\\incomesourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\controllers\\incomesourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\incomesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\models\\incomesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\budgetbillscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\models\\budgetbillscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "BudgetBills\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "BudgetBills\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAiwBkAAABsAAAA",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\IncomeSources\\Index.cshtml",
+              "RelativeDocumentMoniker": "BudgetBills\\Views\\IncomeSources\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\IncomeSources\\Index.cshtml",
+              "RelativeToolTip": "BudgetBills\\Views\\IncomeSources\\Index.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADEAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T20:09:09.1Z",
+              "WhenOpened": "2024-05-10T04:41:19.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "BudgetBills\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "BudgetBills\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFYAAAAqAAAA",
+              "DocumentIndex": 1,
+              "Title": "IncomeSourcesController.cs",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\IncomeSourcesController.cs",
+              "RelativeDocumentMoniker": "BudgetBills\\Controllers\\IncomeSourcesController.cs",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\IncomeSourcesController.cs",
+              "RelativeToolTip": "BudgetBills\\Controllers\\IncomeSourcesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-06T20:00:46.686Z",
+              "WhenOpened": "2024-05-10T04:40:26.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Bill.cs",
+              "RelativeDocumentMoniker": "BudgetBills\\Models\\Bill.cs",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Bill.cs",
+              "RelativeToolTip": "BudgetBills\\Models\\Bill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T04:34:44.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BudgetBillsContext.cs",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\BudgetBillsContext.cs",
+              "RelativeDocumentMoniker": "BudgetBills\\Models\\BudgetBillsContext.cs",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\BudgetBillsContext.cs",
+              "RelativeToolTip": "BudgetBills\\Models\\BudgetBillsContext.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwAsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T04:32:10.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\Home\\Edit.cshtml",
-              "RelativeDocumentMoniker": "BudgetBills\\Views\\Home\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\Home\\Edit.cshtml",
-              "RelativeToolTip": "BudgetBills\\Views\\Home\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-02T20:01:18.127Z",
+              "Title": "IncomeSource.cs",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\IncomeSource.cs",
+              "RelativeDocumentMoniker": "BudgetBills\\Models\\IncomeSource.cs",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\IncomeSource.cs",
+              "RelativeToolTip": "BudgetBills\\Models\\IncomeSource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T04:28:21.166Z",
               "EditorCaption": ""
             }
           ]

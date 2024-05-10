@@ -21,6 +21,7 @@ namespace BudgetBills.Controllers
             IQueryable<Bill> query = db.Bills //creating a query that we can build on
                 .Include(c => c.Category);
 
+            //filter logic
             if (filterArray != null && filterArray.Length > 0)
             {
                 Filter billFilter = new Filter(filterArray);
@@ -37,16 +38,9 @@ namespace BudgetBills.Controllers
                 }
             }
             
-
-            //create new viewmodel
-            BillsViewModel viewModel = new BillsViewModel
-            {
-                Bills = query
-                .OrderBy(b => b.BillId)
-                .ToList(),
-
-                Categories = db.Categories.ToList()
-            };
+            //initialize helper and create viewmodel
+            BillsVMInitializer init = new BillsVMInitializer();
+            BillsViewModel viewModel = init.BuildFilteredViewModel(db, query);
 
             return View(viewModel);
 
@@ -55,16 +49,10 @@ namespace BudgetBills.Controllers
         [HttpPost] //add bill
         public RedirectToActionResult Index(BillsViewModel viewModel)
         {
-            //gather new viewmodel data
-            BillsViewModel updatedVM = new BillsViewModel
-            {
-                Bills = db.Bills
-                .Include(c => c.Category) //include Category data foreach Bill's CategoryId
-                .OrderBy(b => b.BillId)
-                .ToList(),
 
-                Categories = db.Categories.ToList()
-            };
+            //initialize helper and create new viewmodel
+            BillsVMInitializer init = new BillsVMInitializer();
+            BillsViewModel updatedVM = init.BuildViewModel(db);
 
             if (!ModelState.IsValid)
             {
@@ -73,7 +61,7 @@ namespace BudgetBills.Controllers
             }
 
             //if model looks good
-            Bill newBill = viewModel.Bill;
+            Bill newBill = viewModel.Bill; //create new bill with passed in vm
             db.Bills.Add(newBill);
             db.SaveChanges();
 
@@ -83,16 +71,14 @@ namespace BudgetBills.Controllers
         [HttpPost] //PRG pattern for filter
         public RedirectToActionResult FilterBills(int[] FilterArray) { return RedirectToAction("Index", new { filterArray = FilterArray }); }
 
-        [HttpGet] //edit and delete
+        [HttpGet] //edit bill view
         public IActionResult Edit(int id) {
 
             if(id != 0) //if id is passed in
             {
-                BillsViewModel viewModel = new BillsViewModel
-                {
-                    Bill = db.Bills.Find(id),
-                    Categories = db.Categories.ToList()
-                };
+                //create initializer and build VM
+                BillsVMInitializer init = new BillsVMInitializer();
+                BillsViewModel viewModel = init.BuildSingleBillViewModel(db, id);
 
                 return View(viewModel);
 
@@ -104,7 +90,7 @@ namespace BudgetBills.Controllers
         
         }
 
-        [HttpPost] //finalize edit
+        [HttpPost] //delete or update bill
         public IActionResult Edit(string btnType, BillsViewModel viewModel) 
         {
             if (btnType != null)

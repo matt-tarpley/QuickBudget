@@ -1,0 +1,68 @@
+﻿@using BudgetBills.Models;
+@model BillsViewModel;
+@{
+    ViewData["Title"] = "Income Sources";
+}
+
+<style>
+    #bill_table {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .bill_row:hover {
+        cursor: pointer;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Income</h1>
+
+    <!-- Button trigger modal -->
+    <div class="d-flex align-items-end justify-content-end w-75 m-auto">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addIncomeModal">
+            Add Income
+        </button>
+    </div>
+    <div class="row">
+
+        <!--table-->
+        <div class="col-11" id="bill_table">
+            <!--bills table-->
+            <table class="table table-hover table-dark mt-4 w-75 m-auto">
+                <thead>
+                    <tr>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Bill Modal -->
+    <div class="modal fade" id="addIncomeModal" tabindex="-1" aria-labelledby="addIncomeModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addIncomeModalLabel">New Income Source</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--input form-->
+                    <div class="row m-auto">
+                        <div class="text-start">
+                           ...
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/BillViewScript.js"></script>
