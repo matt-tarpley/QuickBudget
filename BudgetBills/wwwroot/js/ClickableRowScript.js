@@ -1,5 +1,5 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
-    const rows = document.querySelectorAll(".bill_row"); //reference to each bill in table
+    const rows = document.querySelectorAll(".clickable_row"); //reference to each bill in table
 
     rows.forEach(row => {
         row.addEventListener("click", () => {

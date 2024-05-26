@@ -50,14 +50,10 @@ namespace BudgetBills.Controllers
         public RedirectToActionResult Index(BillsViewModel viewModel)
         {
 
-            //initialize helper and create new viewmodel
-            BillsVMInitializer init = new BillsVMInitializer();
-            BillsViewModel updatedVM = init.BuildViewModel(db);
-
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("", "All fields required.");
-                return RedirectToAction("Index", updatedVM);
+                return RedirectToAction("Index");
             }
 
             //if model looks good
@@ -65,7 +61,7 @@ namespace BudgetBills.Controllers
             db.Bills.Add(newBill);
             db.SaveChanges();
 
-            return RedirectToAction("Index", updatedVM);
+            return RedirectToAction("Index");
         }
 
         [HttpPost] //PRG pattern for filter

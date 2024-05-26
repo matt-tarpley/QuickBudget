@@ -1,16 +1,16 @@
 ﻿@using BudgetBills.Models;
-@model BillsViewModel;
+@model IncomeViewModel;
 @{
     ViewData["Title"] = "Income Sources";
 }
 
 <style>
-    #bill_table {
+    #income_table {
         max-height: 500px;
         overflow-y: auto;
     }
 
-    .bill_row:hover {
+    .clickable_row:hover {
         cursor: pointer;
     }
 </style>
@@ -27,22 +27,31 @@
     <div class="row">
 
         <!--table-->
-        <div class="col-11" id="bill_table">
-            <!--bills table-->
+        <div id="income_table">
+            <!--income table-->
             <table class="table table-hover table-dark mt-4 w-75 m-auto">
                 <thead>
                     <tr>
-                       
+                        <th scope="col">Description</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Receive Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    @foreach (IncomeSource income in Model.IncomeSources)
+                    {
+                        <tr class="clickable_row" data-billid="@income.IncomeId">
+                            <td>@income.Description</td>
+                            <td>@income.AmountFormatted</td>
+                            <td>@income.DateFormatted</td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- Add Bill Modal -->
+    <!-- Add Income Modal -->
     <div class="modal fade" id="addIncomeModal" tabindex="-1" aria-labelledby="addIncomeModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -54,7 +63,28 @@
                     <!--input form-->
                     <div class="row m-auto">
                         <div class="text-start">
-                           ...
+                           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                           <form asp-action="Index" method="post">
+                               <input asp-for="@Model.IncomeSource.IncomeId" type="hidden" />
+
+                               <div class="form-group mb-2">
+                                   <label asp-for="@Model.IncomeSource.Description">Description:</label>
+                                    <input asp-for="@Model.IncomeSource.Description" type="text" class="form-control" placeholder="Enter description" />
+                               </div>
+
+                               <div class="form-group mb-2">
+                                   <label asp-for="@Model.IncomeSource.Amount">Amount:</label>
+                                   <input asp-for="@Model.IncomeSource.Amount" type="number" class="form-control" placeholder="Enter amount" />
+                               </div>
+
+                               <div class="form-group mb-2">
+                                   <label asp-for="@Model.IncomeSource.RecieveDate">Receive Date:</label>
+                                   <input asp-for="@Model.IncomeSource.RecieveDate" type="date" class="form-control" value="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+                               </div>
+
+                               <button type="submit" class="btn btn-secondary mt-2">Submit</button>
+                               <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+                           </form>
                         </div>
                     </div>
                 </div>
@@ -64,5 +94,3 @@
         </div>
     </div>
 </div>
-
-<script src="~/js/BillViewScript.js"></script>

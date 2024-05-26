@@ -1,0 +1,118 @@
+﻿@model SummaryViewModel;
+<h1 class="text-center">Summary</h1>
+
+<!--tabs-->
+<div class="d-flex align-items-start">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="v-pills-totals-tab" data-bs-toggle="pill" data-bs-target="#v-pills-totals" type="button" role="tab" aria-controls="v-pills-totals" aria-selected="true">Totals</button>
+        <button class="nav-link" id="v-pills-category-tab" data-bs-toggle="pill" data-bs-target="#v-pills-category" type="button" role="tab" aria-controls="v-pills-category" aria-selected="false">Category Breakdown</button>
+        <button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#v-pills-split" type="button" role="tab" aria-controls="v-pills-split" aria-selected="false">Split recommendation</button>
+    </div>
+    <!--totals-->
+    <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-totals" role="tabpanel" aria-labelledby="v-pills-totals-tab">
+            <div class="d-flex justify-content-center align-items-center flex-column m-auto">
+                <p class="text-center lead text-success">total income: @Model.IncomeTotal.ToString("c")</p>
+                <p class="text-center lead text-danger">total bills:  @Model.BillsTotal.ToString("c")</p>
+                <p class="text-center lead text-warning">whats left:  @Model.RemaingBalance.ToString("c")</p>
+            </div>
+        </div>
+
+        <!--category breakdown-->
+        <div class="tab-pane fade" id="v-pills-category" role="tabpanel" aria-labelledby="v-pills-category-tab">
+            <p class="text-center lead">Money spent for each category:</p>
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Necessity Level</th>
+                        <th>Income Spent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var categoryTotal in Model.CategoryTotals)
+                    {
+                        if(categoryTotal.Value > 0)
+                        {
+                            <tr>
+                                <td>@categoryTotal.Key.Description1</td>
+                                <td class="@(categoryTotal.Key.Description2 == "Wants" ? "text-success" : "text-warning")">@categoryTotal.Key.Description2</td>
+                                <td>@categoryTotal.Value.ToString("c")</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            <p class="text-center lead">50/30/20 comparison</p>
+            <div class="row">
+                <div class="col-6">
+                    <!--expected-->
+                    <p class="lead text-success">Expected</p>
+
+                    <p>50% on needs (housing, transportation ect)</p>
+                    <p>@(Model.BreakDown.FiftyPercent.ToString("c"))</p>
+
+                    <p>30% on wants (subscriptions, going out ect)</p>
+                    <p>@(Model.BreakDown.ThirtyPercent.ToString("c"))</p>
+
+                    <p>20% on savings/debt repayment</p>
+                    <p>@(Model.BreakDown.TwentyPercent.ToString("c"))</p>
+                </div>
+
+                <div class="col-6">
+                    <!--actual-->
+                    <p class="lead text-warning">Actual</p>
+
+                    <p>Actual spent on needs (housing, transportation ect)</p>
+                    <p>@(Model.BreakDown.ActualSpentOnNeeds.ToString("c"))</p>
+
+                    <p>Actual spent on wants (subscriptions, going out ect)</p>
+                    <p>@(Model.BreakDown.ActualSpentOnWants.ToString("c"))</p>
+
+                    <p>Actual spent on savings/debt repayment</p>
+                    <p>@(Model.BreakDown.ActualSpentOnSavingsDebt.ToString("c"))</p>
+                </div>
+            </div>
+        </div>
+
+        <!--split recommendation-->
+        <div class="tab-pane fade" id="v-pills-split" role="tabpanel" aria-labelledby="v-pills-split-tab">
+            <p class="text-center lead">split recommendation</p>
+            <ul class="list-group list-group-flush">
+                @foreach (var checkAllocation in Model.CheckAllocations)
+                {
+                    <li class="list-group-item">
+                        <strong>Income Source:</strong> @checkAllocation.Key.Description <!-- Assuming IncomeSource has a Name property -->
+                        <ul>
+                            @foreach (var bill in checkAllocation.Value)
+                            {
+                                <li class="mb-2">
+                                    @* Displaying bill details *@
+                                    <strong>Bill:</strong> @bill.Description <!-- Assuming Bill has a Name property -->
+                                    <br />
+                                    <strong>Amount:</strong> @bill.AmountFormatted <!-- Assuming Bill has an Amount property -->
+                                    <br />
+                                    <strong>Due Date:</strong> @bill.DateFormatted <!-- Displaying DueDate -->
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+
+
+            <p class="text-center lead">Remaining Balances</p>
+            <ul class="list-group list-group-flush">
+                @foreach(var checkBalance in Model.RemainingCheckBalances)
+                {
+                    <li class="list-group-item">
+                        <strong>@checkBalance.Key</strong><br />
+                        <strong class="text-warning">
+                            @checkBalance.Value.ToString("c")
+                        </strong>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

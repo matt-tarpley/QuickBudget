@@ -10,7 +10,7 @@
         overflow-y: auto;
     }
 
-    .bill_row:hover {
+    .clickable_row:hover {
         cursor:pointer;
     }
 </style>
@@ -68,7 +68,7 @@
                 <tbody>
                     @foreach (Bill bill in Model.Bills)
                     {
-                        <tr class="bill_row" data-billid="@bill.BillId"> 
+                        <tr class="clickable_row" data-billid="@bill.BillId">
                             <td>@bill.Description</td>
                             <td>@bill.AmountFormatted</td>
                             <td>@bill.DateFormatted</td>
@@ -131,4 +131,4 @@
     </div>
 </div>
 
-<script src="~/js/BillViewScript.js"></script>
+<script src="~/js/ClickableRowScript.js"></script>

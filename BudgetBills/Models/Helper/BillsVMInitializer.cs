@@ -18,7 +18,7 @@ namespace BudgetBills.Models.Helper
                 Categories = db.Categories.ToList()
             };
 
-            return new BillsViewModel();
+            return viewModel;
         }
 
         //specific to Bills for now, build vm using custom query

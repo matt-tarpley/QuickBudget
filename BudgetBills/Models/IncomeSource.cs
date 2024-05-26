@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,5 +21,26 @@ namespace BudgetBills.Models
 
         [Required(ErrorMessage = "Please enter pay day.")]
         public DateTime RecieveDate { get; set; }
+
+        #region unmapped
+
+        [NotMapped]
+        public string AmountFormatted
+        {
+            get
+            {
+                return Amount.ToString("C");
+            }
+        }
+
+        [NotMapped]
+        public DateOnly DateFormatted
+        {
+            get
+            {
+                return DateOnly.FromDateTime(RecieveDate);
+            }
+        }
+        #endregion
     }
 }
