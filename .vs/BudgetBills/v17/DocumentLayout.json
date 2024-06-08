@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\controllers\\summarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\controllers\\summarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\views\\summary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\views\\summary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\helper\\summaryvminitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\models\\helper\\summaryvminitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\views\\summary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|solutionrelative:budgetbills\\views\\summary\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2843EDA1-8225-4200-BAB1-EDBF3542D5A9}|BudgetBills\\BudgetBills.csproj|c:\\users\\tarpl\\onedrive\\documents\\projects_2\\budgetbills\\budgetbills\\budgetbills\\models\\summaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,33 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Bill.cs",
+              "RelativeDocumentMoniker": "BudgetBills\\Models\\Bill.cs",
+              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Bill.cs",
+              "RelativeToolTip": "BudgetBills\\Models\\Bill.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T19:32:07.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SummaryVMInitializer.cs",
               "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Helper\\SummaryVMInitializer.cs",
               "RelativeDocumentMoniker": "BudgetBills\\Models\\Helper\\SummaryVMInitializer.cs",
               "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Models\\Helper\\SummaryVMInitializer.cs",
               "RelativeToolTip": "BudgetBills\\Models\\Helper\\SummaryVMInitializer.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T20:45:40.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SummaryController.cs",
-              "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\SummaryController.cs",
-              "RelativeDocumentMoniker": "BudgetBills\\Controllers\\SummaryController.cs",
-              "ToolTip": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Controllers\\SummaryController.cs",
-              "RelativeToolTip": "BudgetBills\\Controllers\\SummaryController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T21:00:01.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T20:45:40.728Z"
             },
             {
               "$type": "Document",
@@ -64,12 +63,11 @@
               "RelativeToolTip": "BudgetBills\\Models\\SummaryViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T20:58:23.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T20:58:23.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tarpl\\OneDrive\\Documents\\Projects_2\\BudgetBills\\BudgetBills\\BudgetBills\\Views\\Summary\\Index.cshtml",
               "RelativeDocumentMoniker": "BudgetBills\\Views\\Summary\\Index.cshtml",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "BudgetBills\\Views\\Summary\\Index.cshtml",
               "ViewState": "AQIAAEYAAAAAAAAAAAAcwG4AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-13T19:48:40.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T19:48:40.264Z"
             }
           ]
         }
